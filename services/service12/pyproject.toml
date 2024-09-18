@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "service12"
+version = "0.1.0"
+description = "asdf"
+authors = ["Rafael Caetano Pinto <barenko@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "service12" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pkg_b = { path = "../../packages/pkg_b", develop = true }
+python-dotenv = "1.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = "8.27.0"
+pyright = "1.1.380"
+taskipy = "1.13.0"
+ruff = "0.6.4"
+dunamai = "1.7.0"
+pytest = "8.3.3"
+pytest-cov = "5.0.0"
+factory-boy = "3.3.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

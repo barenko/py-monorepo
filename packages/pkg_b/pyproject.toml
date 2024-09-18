@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "pkg_b"
+version = "0.0.1"
+description = "Mycorp's fancy library"
+authors = ["Rafael Caetano Pinto <barenko@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "../pkg_b" }]
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pkg_a = { path = "../pkg_a", develop = true }
+python-dotenv = "1.0.1"
+
+[tool.poetry.group.dev.dependencies]
+ipython = "8.27.0"
+pyright = "1.1.380"
+taskipy = "1.13.0"
+ruff = "0.6.4"
+dunamai = "1.7.0"
+pytest = "8.3.3"
+pytest-cov = "5.0.0"
+factory-boy = "3.3.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
